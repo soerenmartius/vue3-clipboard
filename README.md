@@ -1,5 +1,7 @@
 # vue3-clipboard
 
+![Build](https://github.com/soerenmartius/vue3-clipboard/workflows/Build/badge.svg)
+
 [Clipboard.js](https://clipboardjs.com/) bindings for Vue 3.
 
 This repository is a port of Inndy's
@@ -15,7 +17,7 @@ directly without webpack.
 
 Copy the value of an input.
 
-``` typescript
+```typescript
 <template>
   <input v-model="value" />
   <button v-clipboard="value">Copy</button>
@@ -36,7 +38,7 @@ export default defineComponent({
 
 Copy value of an input, and handle events separately.
 
-``` typescript
+```typescript
 <template>
   <input v-model="value" />
   <button
