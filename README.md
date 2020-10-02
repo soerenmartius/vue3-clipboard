@@ -2,11 +2,14 @@
 
 [Clipboard.js](https://clipboardjs.com/) bindings for Vue 3.
 
-This plugin is a port of Inndy's [vue-clipboard2](https://github.com/Inndy/vue-clipboard2) plugin for Vue3.
+This repository is a port of Inndy's
+[vue-clipboard2](https://github.com/Inndy/vue-clipboard2) plugin for Vue3.
 
 ## Install
 
-`npm install --save @soerenmartius/vue3-clipboard` or use [dist/vue-clipboard.min.js](https://github.com/soerenmartius/vue3-clipboard/blob/main/dist/vue-clipboard.min.js) directly without webpack.
+`npm install --save @soerenmartius/vue3-clipboard` or use
+[dist/vue-clipboard.min.js](https://github.com/soerenmartius/vue3-clipboard/blob/main/dist/vue-clipboard.min.js)
+directly without webpack.
 
 ## Usage
 
@@ -68,7 +71,11 @@ export default defineComponent({
 
 ## Contributing
 
-Contributions are always encouraged and welcome! For the process of accepting changes, we use Pull Requests. For feature requests please fill an [issue](https://github.com/soerenmartius/vue3-clipboard/issues/new).
+Contributions are always encouraged and welcome!
+For the process of accepting changes, we use
+[Pull Requests](https://github.com/soerenmartius/vue3-clipboard/pulls).
+For feature requests please fill an
+[issue](https://github.com/soerenmartius/vue3-clipboard/issues/new).
 
 ## License
 
