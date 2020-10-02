@@ -1,10 +1,10 @@
 {
-  "name": "vue3-clipboard",
+  "name": "@soerenmartius/vue3-clipboard",
   "version": "0.0.1",
   "description": "A Vue 3 binding for clipboard.js",
   "main": "vue-clipboard.js",
   "scripts": {
-    "build": "$(npm bin)/eslint vue-clipboard.js && $(npm bin)/browserify browserify-me.js -o dist/vue-clipboard.js && $(npm bin)/uglifyjs dist/vue-clipboard.js -o dist/vue-clipboard.min.js && echo Success"
+    "build": "$(npm bin)/eslint vue-clipboard.js && $(npm bin)/browserify browserify-me.js -o dist/vue-clipboard.js && $(npm bin)/minify dist/vue-clipboard.js -o dist/vue-clipboard.min.js && echo 'Build Successful'"
   },
   "repository": {
     "type": "git",
@@ -26,16 +26,19 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
+    "@types/clipboard": "^2.0.1",
     "clipboard": "^2.0.0"
   },
   "devDependencies": {
+    "babel-minify": "^0.5.1",
+    "babel-preset-minify": "^0.5.1",
     "browserify": "^16.5.0",
     "eslint": ">=7.0.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-config-standard": "^14.0.0",
     "eslint-plugin-import": ">=2.22.0",
     "eslint-plugin-node": ">=11.1.0",
     "eslint-plugin-promise": ">=4.2.0",
-    "eslint-plugin-standard": ">=4.0.0",
-    "uglify-js": "^3.11.0"
+    "eslint-plugin-standard": ">=4.0.0"
   }
 }
