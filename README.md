@@ -8,6 +8,64 @@ This plugin is a port of Inndy's [vue-clipboard2](https://github.com/Inndy/vue-c
 
 `npm install --save @soerenmartius/vue3-clipboard` or use [dist/vue-clipboard.min.js](https://github.com/soerenmartius/vue3-clipboard/blob/main/dist/vue-clipboard.min.js) directly without webpack.
 
+## Usage
+
+Copy the value of an input.
+
+``` typescript
+<template>
+  <input v-model="value" />
+  <button v-clipboard="value">Copy</button>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const value = ref('lorem')
+
+    return { value }
+  },
+})
+</script>
+```
+
+Copy value of an input, and handle events separately.
+
+``` typescript
+<template>
+  <input v-model="value" />
+  <button
+    v-clipboard:copy="value"
+    v-clipboard:success="onSuccess"
+    v-clipboard:error="onError"
+  >
+    Copy
+  </button>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const value = ref('lorem')
+
+    const onSuccess = () => {
+      console.log('success')
+    }
+
+    const onError = () => {
+      console.log('error')
+    }
+
+    return { value, onSuccess, onError }
+  },
+})
+</script>
+```
+
 ## Contributing
 
 Contributions are always encouraged and welcome! For the process of accepting changes, we use Pull Requests. For feature requests please fill an [issue](https://github.com/soerenmartius/vue3-clipboard/issues/new).
