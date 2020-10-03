@@ -9,9 +9,7 @@ This repository is a port of Inndy's
 
 ## Install
 
-`npm install --save @soerenmartius/vue3-clipboard` or use
-[dist/vue-clipboard.min.js](https://github.com/soerenmartius/vue3-clipboard/blob/main/dist/vue-clipboard.min.js)
-directly without webpack.
+`npm install --save @soerenmartius/vue3-clipboard`
 
 ## Usage
 
