@@ -13,7 +13,24 @@ This repository is a port of Inndy's
 
 ## Usage
 
-Copy the value of an input.
+### Import the `v-clipboard` directive globally
+
+**`src/main.ts`**
+
+```typescript
+import { createApp } from 'vue'
+import App from './App.vue'
+import VueClipboard from '@soerenmartius/vue3-clipboard'
+
+createApp(App).use(VueClipboard).mount('#app')
+
+```
+
+### Import the `v-clipboard` directive for a specific component
+
+## Examples
+
+### Apply the v-clipboard directive to an element
 
 ```typescript
 <template>
@@ -34,7 +51,7 @@ export default defineComponent({
 </script>
 ```
 
-Copy value of an input, and handle events separately.
+### Copy value of an input, and handle events separately.
 
 ```typescript
 <template>
@@ -64,6 +81,29 @@ export default defineComponent({
     }
 
     return { value, onSuccess, onError }
+  },
+})
+</script>
+```
+
+### Standalone usage of the toClipboard function
+
+```typescript
+<template>
+  <input v-model="value" />
+  <button @click="toClipboard(value)">Copy</button>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+
+import { toClipboard } from '@soerenmartius/vue3-clipboard'
+
+export default defineComponent({
+  setup() {
+    const value = ref('lorem')
+
+    return { value, toClipboard }
   },
 })
 </script>
