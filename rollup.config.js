@@ -88,16 +88,9 @@ function createConfig(format, output, plugins = []) {
 
   return {
     input: `src/index.ts`,
-    // Global and Browser ESM builds inlines everything so that they can be
-    // used alone.
     external,
     plugins: [tsPlugin, ...nodePlugins, ...plugins],
     output,
-    // onwarn: (msg, warn) => {
-    //   if (!/Circular/.test(msg)) {
-    //     warn(msg)
-    //   }
-    // },
   }
 }
 
