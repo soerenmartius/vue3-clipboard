@@ -1,4 +1,4 @@
-# vue3-clipboard ( WIP, not stable yet )
+# vue3-clipboard
 
 
 ![Build](https://github.com/soerenmartius/vue3-clipboard/workflows/Build/badge.svg)
