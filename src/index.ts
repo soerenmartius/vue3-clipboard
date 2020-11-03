@@ -1,2 +1,8 @@
-export * from './clipboard'
-export { install as VueClipboard, Config } from './module'
+import type { IVueClipboard } from './VueClipboard'
+declare module '@vue/runtime-core' {
+  interface ComponentCustomProperties {
+    $vclipboard: IVueClipboard
+  }
+}
+
+export { VueClipboard, toClipboard } from './VueClipboard'

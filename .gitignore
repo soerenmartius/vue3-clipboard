@@ -1,2 +1,9 @@
 .vscode
 node_modules
+coverage
+npm-debug.log
+.nyc_output
+dist
+package-lock.json
+.DS_Store
+demo_dist

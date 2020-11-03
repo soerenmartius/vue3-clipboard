@@ -3,12 +3,25 @@
   "version": "0.0.8",
   "description": "A Vue 3 binding for clipboard.js",
   "main": "dist/vue3-clipboard.cjs.js",
+  "browser": "dist/vue3-clipboard.esm.js",
   "unpkg": "dist/vue3-clipboard.global.js",
   "jsdelivr": "dist/vue3-clipboard.global.js",
   "module": "dist/vue3-clipboard.esm-bundler.js",
   "types": "dist/vue3-clipboard.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/*.js",
+    "dist/vue3-clipboard.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "build": "rollup -c rollup.config.js",
+    "dev": "vite serve",
+    "start": "vite serve --mode production",
+    "demo:build": "vite build",
+    "release": "bash scripts/release.sh",
+    "build:dts": "api-extractor run --local --verbose",
     "lint": "prettier -c --parser typescript \"{src,__tests__,e2e}/**/*.[jt]s?(x)\"",
     "lint:fix": "yarn run lint --write",
     "test:types": "tsc --build tsconfig.json"
@@ -23,13 +36,15 @@
     "clipboard",
     "clipboard.js"
   ],
-  "author": "soerenmartius",
+  "author": {
+    "name": "Soeren Martius",
+    "email": "soeren.martius@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/soerenmartius/vue3-clipboard/issues"
   },
   "homepage": "https://github.com/soerenmartius/vue3-clipboard#readme",
-  "sideEffects": false,
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -50,6 +65,9 @@
     "clipboard": "^2.0.0"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.9.3",
+    "@rollup/plugin-replace": "^2.3.3",
+    "@size-limit/preset-small-lib": "^4.5.5",
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-commonjs": "^15.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
@@ -73,6 +91,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.3",
     "typescript": "^4.0.5",
+    "vite": "^1.0.0-rc.9",
     "vue": "^3.0.2",
     "vue-jest": "^3.0.7"
   }
