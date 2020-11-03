@@ -1,6 +1,6 @@
 {
   "name": "@soerenmartius/vue3-clipboard",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Vue 3 binding for clipboard.js",
   "main": "dist/vue3-clipboard.cjs.js",
   "browser": "dist/vue3-clipboard.esm.js",
