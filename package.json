@@ -1,6 +1,6 @@
 {
   "name": "@soerenmartius/vue3-clipboard",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Vue 3 binding for clipboard.js",
   "main": "dist/vue3-clipboard.cjs.js",
   "browser": "dist/vue3-clipboard.esm.js",
@@ -22,8 +22,8 @@
     "demo:build": "vite build",
     "release": "bash scripts/release.sh",
     "build:dts": "api-extractor run --local --verbose",
-    "lint": "prettier -c --parser typescript \"{src,__tests__,e2e}/**/*.[jt]s?(x)\"",
-    "lint:fix": "yarn run lint --write",
+    "lint": "eslint './{src,tests,examples}/**/*.{js,ts,tsx,vue,md}'",
+    "lint:fix": "yarn run lint --fix",
     "test:types": "tsc --build tsconfig.json"
   },
   "repository": {
