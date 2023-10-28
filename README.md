@@ -1,5 +1,7 @@
 # vue3-clipboard
 
+**Note:** I don't maintain this repository anymore. Instead I recommend using [vueuse](https://vueuse.org/core/useClipboard/#useclipboard).
+
 
 ![Build](https://github.com/soerenmartius/vue3-clipboard/workflows/Build/badge.svg)
 
